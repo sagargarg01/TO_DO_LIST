@@ -1,12 +1,46 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href = "/css/home.css">
         <title>
             <%= title %>
         </title>
     </head>
     <body>
-        <h1>
-            MY TO DO LIST HAHA
-        </h1>
+        <main>
+            <div id="heading">TODO App</div>
+            <form action="">
+
+            <div class="input_div">
+
+                <div id="first_div">
+                <label  id="heading1" for="description">DESCRIPTION</label><br>
+                <input id="description" class="input_text" type="text" placeholder="What Do You Want To Do ..." required>
+                </div>
+
+                <span id="second_div">
+                <label for="category" id="heading2">CATEGORY</label>
+                <select id="category">
+                    <option value="none" selected>Choose a category </option>
+                     <option value="Personal">Personal</option>
+                     <option value="Work">Work</option>
+                     <option value="School">School</option>
+                     <option value="Cleaning">Cleaning</option>
+                     <option value="Other">Other</option>
+                </select>
+            </span>
+
+            <span id="third_div">
+                <label for="due-date" id="heading3">Due-Date:</label>
+                <input type="date" id="due-date" required>
+            </span>
+
+            <div id="button">
+                <span id="add-button"> <i class="fas fa-plus"></i> ADD TASK</span>
+                <span id="del-button"> <i class="fas fa-trash-alt"></i>  DELETE TASKS</span>
+            </div>
+            </div>
+            </form>
+        </main>
     </body>
 </html>

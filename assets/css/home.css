@@ -1,0 +1,137 @@
+body{
+    background-color: grey;
+}
+
+main{
+    color: grey;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    min-width: 100px;
+    min-height: 500px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#heading{
+    padding: 10px;
+    margin-top: -4px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.input_div{
+    text-align: start;
+}
+
+#heading1, #heading2 , #heading3{
+    font-size: small;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+#due-date , #category{
+    color: grey;
+}
+
+#first_div{
+    border-top: 0.1px solid gray;
+    border-bottom: 0.1px solid gray;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+#first_div:focus-within{
+font-size: 14px;
+ background-color: rgb(92%, 93%, 94%); 
+ transition: linear 0.1s;
+}
+
+#description{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+ ::placeholder{
+     color: lightgray;
+ }
+.input_text:focus{
+    color: grey;
+    font-size: 14px;
+     background-color: rgb(92%, 93%, 94%); 
+     transition: linear 0.1s;
+}
+
+
+
+
+
+
+#second_div{
+    display: inline-flex;
+    width: 40%;
+    padding: 20px;
+    border-right: 0.1px solid gray;
+}
+
+#second_div:focus-within{
+    font-size: 14px;
+     background-color: rgb(92%, 93%, 94%); 
+     transition: linear 0.1s;
+}
+
+#category{
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#category:focus{
+    font-size: 14px;
+     background-color: rgb(92%, 93%, 94%); 
+     transition: linear 0.1s;
+}
+
+
+#third_div{
+padding: 20px;
+}
+
+#third_div :focus-within{
+    font-size: 14px;
+    background-color: rgb(92%, 93%, 94%); 
+    transition: linear 0.1s;
+}
+
+
+
+
+#button{
+    margin: auto;
+    border-top: 0.1px solid gray;
+    border-bottom: 0.1px solid gray;
+    padding: 40px;
+}
+
+#add-button{
+    margin-left: 22%;
+    background-color:rgb(27%, 27%, 27%) ;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#del-button{
+    background-color:rgb(93%, 21%, 12%) ;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
