@@ -7,4 +7,6 @@ console.log('router loaded');
 
 router.get('/',homePage.homepage);
 
+router.post('/create-list',homePage.create);
+
 module.exports = router;

@@ -132,25 +132,20 @@ font-size: 14px;
     transition: linear 0.1s;
 }
 
-
+button{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
 #button{
     margin: auto;
     border-top: 0.1px solid gray;
     border-bottom: 0.1px solid gray;
-    padding: 40px;
+    padding: 30px;
 }
 
 #add-button{
-    margin-left: 22%;
-    background-color:rgb(27%, 27%, 27%) ;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-#add-button:hover{
-     background-color:rgb(53, 52, 52) ;
-     cursor: pointer;
+    margin-left: 26%;
 }
 
 #del-button{
@@ -164,4 +159,16 @@ font-size: 14px;
     cursor: pointer;
 }
 
+button{
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+    border-radius: 5px;
+    background-color:rgb(27%, 27%, 27%);
+    color: white;
+}
 
+button:hover{
+    background-color:rgb(53, 52, 52) ;
+    cursor: pointer;
+}

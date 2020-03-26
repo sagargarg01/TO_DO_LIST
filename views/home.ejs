@@ -9,18 +9,18 @@
     <body>
         <main>
             <div id="heading">TODO App</div>
-            <form action="">
+            <form action="/create-list" method="POST">
 
             <div class="input_div">
 
                 <div id="first_div">
                 <label  id="heading1" for="description">DESCRIPTION</label><br>
-                <input id="description" class="input_text" type="text" placeholder="What Do You Want To Do ..." required>
+                <input id="description" class="input_text" type="text" placeholder="What Do You Want To Do ..." required name="description">
                 </div>
 
                 <span id="second_div">
                 <label for="category" id="heading2">CATEGORY</label>
-                <select id="category">
+                <select id="category" name="category">
                     <option value="none" selected>Choose a category </option>
                      <option value="Personal">Personal</option>
                      <option value="Work">Work</option>
@@ -32,13 +32,24 @@
 
             <span id="third_div">
                 <label for="due-date" id="heading3">Due-Date</label>
-                <input type="date" id="due-date" required>
+                <input type="date" id="due-date" required name="date">
             </span>
 
             <div id="button">
-                <span id="add-button"> <i class="fas fa-plus"></i> ADD TASK</span>
-                <span id="del-button"> <i class="fas fa-trash-alt"></i>  DELETE TASKS</span>
+                <button id="add-button" type="submit">
+                     <i class="fas fa-plus"></i> 
+                     ADD TASK
+                    </button>
+
+                    <form action="/delete-item" method="POST">
+                <button id="del-button"> 
+                    <i class="fas fa-trash-alt"></i>  
+                    DELETE TASKS
+                </button>
+                </form>
+                
             </div>
+            
             </div>
             </form>
 
@@ -52,6 +63,6 @@
 
             
         </main>
-        <script src="/js/script.js"></script>
+        <script type="text/javascript" src="/js/script.js"></script>
     </body>
 </html>
