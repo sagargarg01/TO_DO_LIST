@@ -3,16 +3,20 @@ body{
 }
 
 main{
+    overflow-y: scroll;
+    overflow-x: hidden;
     color: grey;
     margin: auto;
     text-align: center;
     width: 50%;
-    height: 70%;
-    min-width: 100px;
-    min-height: 500px;
+    height: 85vh;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 
+}
+
+main::-webkit-scrollbar {
+    display: none;
 }
 
 #heading{
@@ -38,9 +42,9 @@ main{
 }
 
 #first_div{
-    border-top: 0.1px solid gray;
-    border-bottom: 0.1px solid gray;
-    padding: 20px;
+    border-top: 0.1px solid rgb(211,211,211);
+    border-bottom: 0.1px solid rgb(211,211,211);
+    padding: 15px;
     padding-bottom: 10px;
 }
 
@@ -51,7 +55,7 @@ font-size: 14px;
 }
 
 #description{
-    color: gray;
+    color: rgb(211,211,211);
     border: none;
     outline: none;
     height: 30px;
@@ -68,19 +72,18 @@ font-size: 14px;
     transition: linear 0.1s;
 }
 
-
-
-
-
-
-#second_div{
-    display: inline-flex;
-    width: 40%;
-    padding: 20px;
-    border-right: 0.1px solid gray;
+.flex-container{
+    display: flex;
+  flex-wrap: nowrap;
 }
 
-#second_div,#category:hover{
+#second_div{
+    padding: 15px;
+    width: 45%;
+    border-right: 0.1px solid rgb(211,211,211);
+}
+
+#second_div,#category:hover,#due-date{
     cursor: pointer;
 }
 
@@ -90,11 +93,16 @@ font-size: 14px;
      transition: linear 0.1s;
 }
 
+
 #category{
     outline: none;
     border: none;
-    padding: 10px;
     font-weight: bold;
+    width: 100%;
+}
+
+.white{
+    background-color: white;
 }
 
 #category:focus{
@@ -105,10 +113,8 @@ font-size: 14px;
 
 
 #third_div{
-    margin-left: -4px;
-    padding-left: 8px;
-    padding-top: 20px;
-    padding-bottom: 39px;
+    padding: 15px;
+    width: 50%;
 }
 
 #third_div:focus-within{
@@ -118,12 +124,10 @@ font-size: 14px;
 }
 
 #due-date{
-    margin-left: 34px;
     outline: none;
     border: none;
-    height:55px;
-    width: 35%;
     font-weight: bold;
+    width: 100%;
 }
 
 #due-date:focus{
@@ -139,13 +143,15 @@ button{
 }
 #button{
     margin: auto;
-    border-top: 0.1px solid gray;
-    border-bottom: 0.1px solid gray;
+    border-top: 0.1px solid rgb(211,211,211);
+    border-bottom: 0.1px solid rgb(211,211,211);
     padding: 30px;
 }
 
 #add-button{
-    margin-left: 26%;
+    padding-left: 20px;
+    margin-left: 147.292;
+    padding-right: 20px;
 }
 
 #del-button{
@@ -171,4 +177,41 @@ button{
 button:hover{
     background-color:rgb(53, 52, 52) ;
     cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+}
+
+.list{
+    text-align: start;
+    padding: 10px;
+    border-bottom: 0.1px solid rgb(211,211,211);
+    height: 40.667;
+    padding-left: 11px;
+    width: 557.667;
+    margin-left: 19px;
+}
+
+.list-category{
+    background-color: darkgoldenrod;
+    text-align: center;
+    float:right;
+   padding: 10px;
+   color: white;
+   border-radius: 2px;
+   width: 81px;
+   height: 20px;
+}
+
+.list-date{
+    color: rgb(71%, 76%, 77%);
+    display: block;
+    margin-left: 5%;
+    transform: scale(0.75);
+    transform-origin: left;
+}
+
+#calendar{
+    transform: scale(1.3);
 }

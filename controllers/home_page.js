@@ -1,8 +1,17 @@
 const List = require('../models/list');
 
 module.exports.homepage = function(req,res){
-    return res.render('home',{
-       title : "TO_DO_LIST" 
+
+    //fetching data from database
+    List.find({},function(err,list){
+        if(err){
+            console.log('Error in fetching list from db');
+            return;
+        }
+        return res.render('home',{
+            title : "TO_DO_LIST", 
+            TODO_List : list
+         });
     });
 }
 
@@ -17,3 +26,4 @@ module.exports.create = function(req,res){
         return res.redirect('back');
     });
 }
+
