@@ -7,7 +7,7 @@ main{
     margin: auto;
     text-align: center;
     width: 50%;
-    height: 50%;
+    height: 70%;
     min-width: 100px;
     min-height: 500px;
     background-color: white;
@@ -51,6 +51,7 @@ font-size: 14px;
 }
 
 #description{
+    color: gray;
     border: none;
     outline: none;
     height: 30px;
@@ -62,9 +63,9 @@ font-size: 14px;
  }
 .input_text:focus{
     color: grey;
-    font-size: 14px;
-     background-color: rgb(92%, 93%, 94%); 
-     transition: linear 0.1s;
+    font-size: 15px;
+    background-color: rgb(92%, 93%, 94%); 
+    transition: linear 0.1s;
 }
 
 
@@ -77,6 +78,10 @@ font-size: 14px;
     width: 40%;
     padding: 20px;
     border-right: 0.1px solid gray;
+}
+
+#second_div,#category:hover{
+    cursor: pointer;
 }
 
 #second_div:focus-within{
@@ -100,16 +105,32 @@ font-size: 14px;
 
 
 #third_div{
-padding: 20px;
+    margin-left: -4px;
+    padding-left: 8px;
+    padding-top: 20px;
+    padding-bottom: 39px;
 }
 
-#third_div :focus-within{
+#third_div:focus-within{
     font-size: 14px;
     background-color: rgb(92%, 93%, 94%); 
     transition: linear 0.1s;
 }
 
+#due-date{
+    margin-left: 34px;
+    outline: none;
+    border: none;
+    height:55px;
+    width: 35%;
+    font-weight: bold;
+}
 
+#due-date:focus{
+    font-size: 14px;
+    background-color: rgb(92%, 93%, 94%); 
+    transition: linear 0.1s;
+}
 
 
 #button{
@@ -127,11 +148,20 @@ padding: 20px;
     border-radius: 5px;
 }
 
+#add-button:hover{
+     background-color:rgb(53, 52, 52) ;
+     cursor: pointer;
+}
+
 #del-button{
     background-color:rgb(93%, 21%, 12%) ;
     color: white;
     padding: 15px;
     border-radius: 5px;
+}
+#del-button:hover{
+    background-color: rgb(187, 44, 25) ;
+    cursor: pointer;
 }
 
 
