@@ -36,51 +36,59 @@
                 <input type="date" id="due-date" required name="date">
             </div>
                 </div>
-
+                
             <div id="button">
                 <button id="add-button" type="submit">
                      <i class="fas fa-plus"></i> 
                      ADD TASK
                     </button>
+                    
+                
+            
+            </form>
 
-                <button id="del-button"> 
+            <form action="/delete-item" method="get" class="aform">
+
+                <button id="del-button" type="submit"> 
                     <i class="fas fa-trash-alt"></i>  
                     DELETE TASKS
                 </button>
-
             </div>
-            </div>
+        </div>
+                <% for (let i of TODO_List) { %> 
+                    <div class="list">
+                        <li>
+                            <div class="list-items">
+                                <label class="container">
+                                <input type="checkbox" id="checkbox" name="<%= i._id %>">
+                                <span id="list-desc"> <%= i.description %></span>
+                                <span class="checkmark" id="check()"></span>
+                                </span>
+                            </label>
+                            
+                            <% if(i.category === 'Personal'){ %>
+                                <span class="list-category" style="background-color: rgb(24%, 42%, 73%)"><%= i.category %></span>
+                                <%}%>
+                                <% if(i.category === 'School'){ %>
+                                    <span class="list-category" style="background-color: #F2A700"><%= i.category %></span>
+                                <%}%>
+                                <% if(i.category === 'Work'){ %>
+                                    <span class="list-category" style="background-color: #9C00AF"><%= i.category %></span>
+                            <%}%>
+                                <% if(i.category === 'Cleaning'){ %>
+                                        <span class="list-category" style="background-color: rgb(214, 43, 43)"><%= i.category %></span>
+                                <%}%>
+                                <% if(i.category === 'Other'){ %>
+                                    <span class="list-category" style="background-color: rgb(9, 206, 58)"><%= i.category %></span>
+                                <%}%>
+                                <span class="list-date">  <i id="calendar" class="far fa-calendar-alt"></i> &nbsp; <%= i.date %></span>
+                            </div>
+                        </li>
+                    </div>
+                    <% } %>
             </form>
-
-            <% for (let i of TODO_List) { %> 
-                <div class="list">
-                    <li>
-                        <div class="list-items">
-                            <label class="for-checkbox">
-                            <input id="checkbox" class="checkbox" type="checkbox" name="checkbox">
-                            <span class="mark"></span></label>
-                            <span class="list-desc"> <%= i.description %></span>
-                           <% if(i.category === 'Personal'){ %>
-                            <span class="list-category" style="background-color: rgb(24%, 42%, 73%)"><%= i.category %></span>
-                            <%}%>
-                            <% if(i.category === 'School'){ %>
-                                <span class="list-category" style="background-color: #F2A700"><%= i.category %></span>
-                            <%}%>
-                            <% if(i.category === 'Work'){ %>
-                                <span class="list-category" style="background-color: #9C00AF"><%= i.category %></span>
-                           <%}%>
-                            <% if(i.category === 'Cleaning'){ %>
-                                    <span class="list-category" style="background-color: rgb(214, 43, 43)"><%= i.category %></span>
-                            <%}%>
-                            <% if(i.category === 'Other'){ %>
-                                <span class="list-category" style="background-color: rgb(9, 206, 58)"><%= i.category %></span>
-                            <%}%>
-                            <span class="list-date">  <i id="calendar" class="far fa-calendar-alt"></i> &nbsp; <%= i.date %></span>
-                        </div>
-                    </li>
-                </div>
-                <% } %>
         </main>
+
         <script type="text/javascript" src="/js/script.js"></script>
     </body>
 </html>

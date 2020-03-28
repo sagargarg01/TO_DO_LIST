@@ -2,6 +2,7 @@ body{
     background-color: grey;
 }
 
+/* main section*/
 main{
     overflow-y: scroll;
     overflow-x: hidden;
@@ -19,6 +20,7 @@ main::-webkit-scrollbar {
     display: none;
 }
 
+/* TODO App heading */
 #heading{
     padding: 10px;
     margin-top: -4px;
@@ -31,6 +33,7 @@ main::-webkit-scrollbar {
     text-align: start;
 }
 
+/* sub headings */
 #heading1, #heading2 , #heading3{
     font-size: small;
     font-family: cursive;
@@ -41,6 +44,7 @@ main::-webkit-scrollbar {
     color: grey;
 }
 
+/* description box */
 #first_div{
     border-top: 0.1px solid rgb(211,211,211);
     border-bottom: 0.1px solid rgb(211,211,211);
@@ -77,6 +81,7 @@ font-size: 14px;
   flex-wrap: nowrap;
 }
 
+/* choose category box */
 #second_div{
     padding: 15px;
     width: 45%;
@@ -92,7 +97,6 @@ font-size: 14px;
      background-color: rgb(92%, 93%, 94%); 
      transition: linear 0.1s;
 }
-
 
 #category{
     outline: none;
@@ -111,7 +115,7 @@ font-size: 14px;
      transition: linear 0.1s;
 }
 
-
+/* choose date box */
 #third_div{
     padding: 15px;
     width: 50%;
@@ -148,12 +152,14 @@ button{
     padding: 30px;
 }
 
+/* add item */
 #add-button{
     padding-left: 20px;
     margin-left: 147.292;
     padding-right: 20px;
 }
 
+/* delete item */
 #del-button{
     background-color:rgb(93%, 21%, 12%) ;
     color: white;
@@ -163,6 +169,10 @@ button{
 #del-button:hover{
     background-color: rgb(187, 44, 25) ;
     cursor: pointer;
+}
+
+.aform{
+    display: inline !important;
 }
 
 button{
@@ -183,7 +193,9 @@ li{
     list-style-type: none;
 }
 
+/* list items */
 .list{
+    text-transform: capitalize;
     text-align: start;
     padding: 10px;
     border-bottom: 0.1px solid rgb(211,211,211);
@@ -194,7 +206,6 @@ li{
 }
 
 .list-category{
-    background-color: darkgoldenrod;
     text-align: center;
     float:right;
    padding: 10px;
@@ -207,7 +218,7 @@ li{
 .list-date{
     color: rgb(71%, 76%, 77%);
     display: block;
-    margin-left: 5%;
+    margin-left: 7%;
     transform: scale(0.75);
     transform-origin: left;
 }
@@ -215,3 +226,76 @@ li{
 #calendar{
     transform: scale(1.3);
 }
+
+/* custom checkbox */
+.container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* font-size: 15px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 2px solid gray;
+    border-radius: 5px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark{
+    background-color: rgb(21, 218, 208);
+    border: 2px solid rgb(21, 218, 208);
+  }
+
+  .container input:checked + span{
+      text-decoration: line-through;
+      color: rgb(211,211,211);
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

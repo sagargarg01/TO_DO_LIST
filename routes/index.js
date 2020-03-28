@@ -9,4 +9,6 @@ router.get('/',homePage.homepage);
 
 router.post('/create-list',homePage.create);
 
+router.get('/delete-item',homePage.delete);
+
 module.exports = router;
