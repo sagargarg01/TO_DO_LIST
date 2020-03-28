@@ -41,6 +41,7 @@ module.exports.delete = function(req,res){
     //iterating over each selected boxes
     for(let i=0;i<chechboxs;i++)
     {
+        //find the item in the database using id and delte it
         List.findByIdAndDelete(Object.keys(id)[i],function(err)
         {
             if(err)
@@ -52,12 +53,6 @@ module.exports.delete = function(req,res){
         })
     }
     return res.redirect('back');
-    //find the item in the database using id and delte it
-    // List.findByIdAndDelete(id,function(err){
-    //     if(err){console.log('Error while deleting the item from database');return;}
 
-    //     return res.redirect('back');
-
-    // });
 
 }
